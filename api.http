@@ -1,0 +1,30 @@
+### Recuperar todas las peliclas
+GET http://localhost:1234/movies
+
+### Recuperar pelicula por id
+Get http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+
+### Recuperar todas las peliculas por un genero
+GET http://localhost:1234/movies?genre=action
+
+### Crear una pelicula
+POST http://localhost:1234/movies
+Content-Type: application/json
+
+{
+  "blabla": "soy cualquier cosa", 
+  "title": "Forrest Gump",
+  "year": 1994,
+  "director": "Robert Zemeckis",
+  "duration": 142,
+  "poster": "https://i.ebayimg.com/images/g/qR8AAOSwkvRZzuMD/s-l1600.jpg",
+  "genre": ["Drama", "Romance"]
+}
+
+### Actualizar una pelicula parcialmente
+PATCH http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+Content-Type: application/json
+
+{
+  "year":1995
+}

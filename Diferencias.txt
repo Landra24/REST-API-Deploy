@@ -1,0 +1,19 @@
+Diferencias entre POST, PUT, PATCH
+
+POST
+crea un nuevo elemento/recurso en el servidor
+/movies
+
+NO ES IDEMPOTENTE, CREAS SIEMPRE UN NUEVO RECURSO
+
+PUT
+actualiza totalmente un elemento ya existente, pero si no existe lo crea
+/movies/id
+
+ES IDEMPOTENTE, EL RESULTADO SIEMPRE ES EL MISMO, YA QUE SE ACTUALIZA EL RECURSO CON LOS MISMOS DATOS
+
+PATCH
+actualiza parcialmente un elemento/recurso
+/movies/id
+
+SI ES IDEMPOTENTE PERO DEPENDE DE LA SITUACION
